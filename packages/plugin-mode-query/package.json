@@ -1,0 +1,35 @@
+{
+    "name": "@elizaos/plugin-mode-query",
+    "version": "0.1.7-alpha.1",
+    "description": "Mode network query plugin for ElizaOS",
+    "main": "dist/index.js",
+    "module": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "type": "module",
+    "private": false,
+    "files": [
+      "dist"
+    ],
+    "scripts": {
+      "build": "tsup",
+      "dev": "tsup --watch",
+      "clean": "rm -rf dist"
+    },
+    "dependencies": {
+      "@elizaos/core": "workspace:*",
+      "axios": "^1.6.2"
+    },
+    "devDependencies": {
+      "tsup": "^8.0.1",
+      "typescript": "^5.3.2"
+    },
+    "publishConfig": {
+      "access": "public"
+    },
+    "exports": {
+      ".": {
+        "import": "./dist/index.js",
+        "types": "./dist/index.d.ts"
+      }
+    }
+  }
